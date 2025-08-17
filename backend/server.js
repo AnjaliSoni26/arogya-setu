@@ -15,7 +15,7 @@ require('./utils/cleanupService');
 const app = express();
 
 app.use(cors({
-  origin: "https://arogya-setu-eight.vercel.app",  // your frontend domain
+  origin: "https://arogya-setu-git-main-anjalisoni26s-projects.vercel.app",  // your frontend domain
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   credentials: true
 }));
