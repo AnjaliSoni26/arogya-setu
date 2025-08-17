@@ -1,0 +1,802 @@
+/* Component-specific styles */
+
+/* Button Components */
+.btn-gradient {
+  background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+  @apply text-white border-0 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200;
+}
+
+.btn-outline-primary {
+  @apply border-2 border-emerald-600 text-emerald-600 bg-transparent hover:bg-emerald-600 hover:text-white;
+}
+
+.btn-ghost {
+  @apply bg-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-900 border-0;
+}
+
+/* Card Variants */
+.card-elevated {
+  @apply bg-white rounded-xl shadow-lg border-0 hover:shadow-xl transition-all duration-300;
+}
+
+.card-flat {
+  @apply bg-white rounded-lg border border-gray-200 shadow-none hover:shadow-sm;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+  @apply text-white border-0 shadow-lg;
+}
+
+/* Input Variants */
+.input-floating {
+  @apply relative;
+}
+
+.input-floating input {
+  @apply pt-6 pb-2 px-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors;
+}
+
+.input-floating label {
+  @apply absolute left-3 top-2 text-xs text-gray-500 transition-all duration-200;
+}
+
+.input-floating input:placeholder-shown + label {
+  @apply top-3 text-base text-gray-400;
+}
+
+.input-floating input:focus + label,
+.input-floating input:not(:placeholder-shown) + label {
+  @apply top-2 text-xs text-emerald-600;
+}
+
+/* Doctor Card Enhancements */
+.doctor-card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-emerald-200 transition-all duration-300 overflow-hidden;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+}
+
+.doctor-avatar-gradient {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  @apply rounded-full flex items-center justify-center;
+}
+
+.doctor-specialization {
+  @apply text-emerald-600 font-semibold text-sm bg-emerald-50 px-3 py-1 rounded-full inline-block;
+}
+
+/* Appointment Status Styles */
+.appointment-card {
+  @apply bg-white rounded-lg shadow-sm border-l-4 hover:shadow-md transition-all duration-200;
+}
+
+.appointment-card.confirmed {
+  @apply border-l-green-500;
+}
+
+.appointment-card.pending {
+  @apply border-l-yellow-500;
+}
+
+.appointment-card.cancelled {
+  @apply border-l-red-500;
+}
+
+.appointment-card.completed {
+  @apply border-l-blue-500;
+}
+
+.appointment-card.rescheduled {
+  @apply border-l-purple-500;
+}
+
+/* Time Slot Picker */
+.time-slot-grid {
+  @apply grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2;
+}
+
+.time-slot-button {
+  @apply p-3 text-center text-sm border-2 rounded-lg cursor-pointer transition-all duration-200 font-medium relative overflow-hidden;
+}
+
+.time-slot-button::before {
+  content: '';
+  @apply absolute inset-0 bg-emerald-500 transform scale-x-0 transition-transform duration-200 origin-left;
+}
+
+.time-slot-button:hover::before {
+  @apply scale-x-100;
+}
+
+.time-slot-button span {
+  @apply relative z-10;
+}
+
+.time-slot-button:hover span {
+  @apply text-white;
+}
+
+.time-slot-button.available {
+  @apply border-gray-300 text-gray-700 bg-white hover:border-emerald-500;
+}
+
+.time-slot-button.selected {
+  @apply border-emerald-500 bg-emerald-500 text-white shadow-md;
+}
+
+.time-slot-button.unavailable {
+  @apply border-gray-200 text-gray-400 bg-gray-50 cursor-not-allowed;
+}
+
+.time-slot-button.unavailable::before {
+  @apply hidden;
+}
+
+/* Modal Enhancements */
+.modal-backdrop {
+  @apply fixed inset-0 bg-black bg-opacity-50 transition-opacity z-40;
+  backdrop-filter: blur(4px);
+}
+
+.modal-panel {
+  @apply bg-white rounded-2xl shadow-2xl transform transition-all z-50 max-h-screen overflow-y-auto;
+}
+
+.modal-enter {
+  @apply opacity-0 scale-95;
+}
+
+.modal-enter-active {
+  @apply opacity-100 scale-100 transition-all duration-200 ease-out;
+}
+
+.modal-exit {
+  @apply opacity-100 scale-100;
+}
+
+.modal-exit-active {
+  @apply opacity-0 scale-95 transition-all duration-150 ease-in;
+}
+
+/* Navigation Enhancements */
+.nav-brand {
+  @apply flex items-center space-x-2 text-xl font-bold text-gray-900 hover:text-emerald-600 transition-colors;
+}
+
+.nav-menu {
+  @apply hidden md:flex items-center space-x-1;
+}
+
+.nav-item {
+  @apply flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative;
+}
+
+.nav-item::before {
+  content: '';
+  @apply absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600 transform scale-x-0 transition-transform duration-200;
+}
+
+.nav-item.active::before {
+  @apply scale-x-100;
+}
+
+.nav-item.active {
+  @apply text-emerald-600 bg-emerald-50;
+}
+
+.nav-item:not(.active) {
+  @apply text-gray-700 hover:text-emerald-600 hover:bg-gray-100;
+}
+
+/* Search Component */
+.search-container {
+  @apply relative;
+}
+
+.search-input {
+  @apply w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200 bg-white;
+}
+
+.search-input:focus {
+  @apply shadow-lg;
+}
+
+.search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400;
+}
+
+.search-results {
+  @apply absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-lg z-50 max-h-64 overflow-y-auto;
+}
+
+.search-result-item {
+  @apply px-4 py-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0 transition-colors;
+}
+
+/* Filter Panel */
+.filter-panel {
+  @apply bg-white p-6 rounded-xl shadow-sm border border-gray-200;
+}
+
+.filter-group {
+  @apply mb-4 last:mb-0;
+}
+
+.filter-label {
+  @apply block text-sm font-semibold text-gray-700 mb-2;
+}
+
+.filter-option {
+  @apply flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors;
+}
+
+.filter-checkbox {
+  @apply rounded border-gray-300 text-emerald-600 focus:ring-emerald-500;
+}
+
+/* Stats Dashboard */
+.stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.stat-card {
+  @apply bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow;
+}
+
+.stat-icon {
+  @apply h-8 w-8 text-emerald-600 mb-3;
+}
+
+.stat-value {
+  @apply text-2xl font-bold text-gray-900 mb-1;
+}
+
+.stat-label {
+  @apply text-sm text-gray-600 font-medium;
+}
+
+.stat-change {
+  @apply text-xs font-medium;
+}
+
+.stat-change.positive {
+  @apply text-green-600;
+}
+
+.stat-change.negative {
+  @apply text-red-600;
+}
+
+/* Calendar Component */
+.calendar-container {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden;
+}
+
+.calendar-header {
+  @apply bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between;
+}
+
+.calendar-nav-button {
+  @apply p-2 rounded-lg hover:bg-gray-200 transition-colors;
+}
+
+.calendar-grid {
+  @apply grid grid-cols-7 gap-0;
+}
+
+.calendar-day-header {
+  @apply p-3 text-center text-xs font-semibold text-gray-500 bg-gray-50 border-b border-gray-200;
+}
+
+.calendar-day-cell {
+  @apply p-3 text-center border-b border-r border-gray-200 hover:bg-emerald-50 cursor-pointer transition-colors relative;
+}
+
+.calendar-day-cell:nth-child(7n) {
+  @apply border-r-0;
+}
+
+.calendar-day-cell.today {
+  @apply bg-emerald-100 text-emerald-700 font-semibold;
+}
+
+.calendar-day-cell.selected {
+  @apply bg-emerald-600 text-white;
+}
+
+.calendar-day-cell.disabled {
+  @apply text-gray-300 cursor-not-allowed hover:bg-transparent;
+}
+
+.calendar-day-cell.has-appointments::after {
+  content: '';
+  @apply absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-500 rounded-full;
+}
+
+/* Notification Enhancements */
+.notification-container {
+  @apply fixed top-4 right-4 z-50 space-y-2;
+}
+
+.notification {
+  @apply p-4 rounded-lg shadow-lg border-l-4 max-w-sm transform transition-all duration-300;
+}
+
+.notification.success {
+  @apply bg-green-50 border-l-green-500 text-green-800;
+}
+
+.notification.error {
+  @apply bg-red-50 border-l-red-500 text-red-800;
+}
+
+.notification.warning {
+  @apply bg-yellow-50 border-l-yellow-500 text-yellow-800;
+}
+
+.notification.info {
+  @apply bg-blue-50 border-l-blue-500 text-blue-800;
+}
+
+/* Progress Indicators */
+.progress-steps {
+  @apply flex items-center justify-between mb-8;
+}
+
+.progress-step {
+  @apply flex items-center space-x-2;
+}
+
+.progress-step-circle {
+  @apply w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold;
+}
+
+.progress-step-circle.completed {
+  @apply bg-emerald-600 text-white;
+}
+
+.progress-step-circle.current {
+  @apply bg-emerald-100 text-emerald-600 border-2 border-emerald-600;
+}
+
+.progress-step-circle.pending {
+  @apply bg-gray-200 text-gray-500;
+}
+
+.progress-step-line {
+  @apply flex-1 h-0.5 bg-gray-200 mx-4;
+}
+
+.progress-step-line.completed {
+  @apply bg-emerald-600;
+}
+
+/* Responsive Utilities */
+@media (max-width: 640px) {
+  .mobile-stack {
+    @apply flex-col space-y-4 space-x-0;
+  }
+  
+  .mobile-grid-1 {
+    @apply grid-cols-1;
+  }
+  
+  .mobile-text-center {
+    @apply text-center;
+  }
+  
+  .mobile-px-4 {
+    @apply px-4;
+  }
+  
+  .mobile-py-8 {
+    @apply py-8;
+  }
+}
+
+@media (max-width: 768px) {
+  .tablet-stack {
+    @apply flex-col space-y-4 space-x-0;
+  }
+  
+  .tablet-grid-2 {
+    @apply grid-cols-2;
+  }
+}
+
+/* Accessibility Enhancements */
+.focus-visible {
+  @apply focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2;
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-emerald-600 text-white px-4 py-2 rounded-lg z-50;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .card {
+    @apply border-2 border-gray-600;
+  }
+  
+  .btn-primary {
+    @apply bg-emerald-800 border-2 border-emerald-900;
+  }
+  
+  .text-gray-600 {
+    @apply text-gray-800;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hover-lift:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  .card {
+    @apply shadow-none border border-gray-300;
+  }
+  
+  .btn {
+    @apply border border-gray-400 bg-transparent text-gray-800;
+  }
+}
+
+/* Loading Skeleton Animations */
+.skeleton-pulse {
+  @apply bg-gray-200 animate-pulse;
+}
+
+.skeleton-wave {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: wave 1.5s infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Tooltip Enhancements */
+.tooltip-container {
+  @apply relative inline-block;
+}
+
+.tooltip-content {
+  @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 text-xs font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-200;
+}
+
+.tooltip-container:hover .tooltip-content {
+  @apply opacity-100;
+}
+
+.tooltip-arrow {
+  @apply absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900;
+}
+
+/* Badge Variants */
+.badge-lg {
+  @apply px-3 py-1 text-sm;
+}
+
+.badge-outline {
+  @apply bg-transparent border;
+}
+
+.badge-outline.success {
+  @apply border-green-500 text-green-600;
+}
+
+.badge-outline.error {
+  @apply border-red-500 text-red-600;
+}
+
+.badge-outline.warning {
+  @apply border-yellow-500 text-yellow-600;
+}
+
+.badge-outline.info {
+  @apply border-blue-500 text-blue-600;
+}
+
+/* Form Enhancements */
+.form-section {
+  @apply mb-8 pb-8 border-b border-gray-200 last:border-b-0 last:pb-0;
+}
+
+.form-section-title {
+  @apply text-lg font-semibold text-gray-900 mb-4;
+}
+
+.form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.form-grid-3 {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+}
+
+/* Error Boundary */
+.error-boundary {
+  @apply min-h-screen flex items-center justify-center bg-gray-50;
+}
+
+.error-content {
+  @apply text-center max-w-md mx-auto px-4;
+}
+
+.error-illustration {
+  @apply h-24 w-24 text-red-400 mx-auto mb-6;
+}
+
+.error-title {
+  @apply text-2xl font-bold text-gray-900 mb-4;
+}
+
+.error-description {
+  @apply text-gray-600 mb-6;
+}
+
+.error-actions {
+  @apply space-x-4;
+}
+
+/* Success States */
+.success-illustration {
+  @apply h-24 w-24 text-green-400 mx-auto mb-6;
+}
+
+.success-title {
+  @apply text-2xl font-bold text-gray-900 mb-4;
+}
+
+.success-description {
+  @apply text-gray-600 mb-6;
+}
+
+/* Loading States */
+.loading-card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6 animate-pulse;
+}
+
+.loading-avatar {
+  @apply h-16 w-16 bg-gray-200 rounded-full;
+}
+
+.loading-text {
+  @apply h-4 bg-gray-200 rounded;
+}
+
+.loading-text.lg {
+  @apply h-6;
+}
+
+.loading-text.sm {
+  @apply h-3;
+}
+
+/* Micro-interactions */
+.click-effect {
+  @apply transform active:scale-95 transition-transform duration-100;
+}
+
+.hover-glow {
+  @apply transition-all duration-200;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(5, 150, 105, 0.3);
+}
+
+/* Custom Scrollbars for specific components */
+.appointments-list {
+  @apply max-h-96 overflow-y-auto scrollbar-thin;
+}
+
+.doctors-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* Responsive Typography */
+.heading-responsive {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold;
+}
+
+.subheading-responsive {
+  @apply text-lg sm:text-xl md:text-2xl;
+}
+
+.body-responsive {
+  @apply text-sm sm:text-base;
+}
+
+/* Medical Theme Specific Components */
+.medical-card {
+  @apply bg-gradient-to-br from-white to-emerald-50 border border-emerald-100 rounded-xl shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.medical-badge {
+  @apply bg-emerald-100 text-emerald-800 border border-emerald-200 px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+.consultation-mode-selector {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.consultation-mode-option {
+  @apply p-6 border-2 border-gray-200 rounded-xl cursor-pointer transition-all duration-200 hover:border-emerald-300 hover:bg-emerald-50;
+}
+
+.consultation-mode-option.selected {
+  @apply border-emerald-500 bg-emerald-50;
+}
+
+.consultation-mode-icon {
+  @apply h-8 w-8 mb-3;
+}
+
+.consultation-mode-title {
+  @apply text-lg font-semibold text-gray-900 mb-2;
+}
+
+.consultation-mode-description {
+  @apply text-sm text-gray-600;
+}
+
+/* Appointment Flow */
+.booking-progress {
+  @apply flex items-center justify-center mb-8;
+}
+
+.booking-step {
+  @apply flex items-center;
+}
+
+.booking-step-number {
+  @apply w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold;
+}
+
+.booking-step-number.completed {
+  @apply bg-emerald-600 text-white;
+}
+
+.booking-step-number.current {
+  @apply bg-emerald-100 text-emerald-600 border-2 border-emerald-600;
+}
+
+.booking-step-number.pending {
+  @apply bg-gray-200 text-gray-500;
+}
+
+.booking-step-connector {
+  @apply w-16 h-0.5 bg-gray-200 mx-2;
+}
+
+.booking-step-connector.completed {
+  @apply bg-emerald-600;
+}
+
+/* OTP Input */
+.otp-container {
+  @apply flex justify-center space-x-2 mb-6;
+}
+
+.otp-input {
+  @apply w-12 h-12 text-center text-lg font-semibold border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors;
+}
+
+.otp-input:focus {
+  @apply shadow-lg;
+}
+
+/* Confirmation Styles */
+.confirmation-card {
+  @apply bg-green-50 border border-green-200 rounded-xl p-6 text-center;
+}
+
+.confirmation-icon {
+  @apply h-16 w-16 text-green-500 mx-auto mb-4;
+}
+
+.confirmation-title {
+  @apply text-xl font-semibold text-green-800 mb-2;
+}
+
+.confirmation-message {
+  @apply text-green-700;
+}
+
+/* Doctor Dashboard Specific */
+.dashboard-sidebar {
+  @apply w-64 bg-white shadow-lg border-r border-gray-200 fixed left-0 top-16 bottom-0 overflow-y-auto;
+}
+
+.dashboard-content {
+  @apply ml-64 p-8;
+}
+
+.dashboard-card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+}
+
+.dashboard-metric {
+  @apply text-center p-4 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg;
+}
+
+.dashboard-metric-value {
+  @apply text-3xl font-bold text-emerald-600 mb-1;
+}
+
+.dashboard-metric-label {
+  @apply text-sm text-gray-600 font-medium;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    @apply transform -translate-x-full transition-transform duration-300;
+  }
+  
+  .dashboard-sidebar.open {
+    @apply translate-x-0;
+  }
+  
+  .dashboard-content {
+    @apply ml-0 p-4;
+  }
+  
+  .doctors-grid {
+    @apply grid-cols-1;
+  }
+  
+  .stats-grid {
+    @apply grid-cols-2;
+  }
+  
+  .time-slot-grid {
+    @apply grid-cols-3;
+  }
+}
+
+/* Dark mode preparation */
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+.dark .card {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.dark .form-input {
+  @apply bg-gray-800 border-gray-600 text-white;
+}
+
+.dark .btn-secondary {
+  @apply bg-gray-700 text-white border-gray-600 hover:bg-gray-600;
+}
