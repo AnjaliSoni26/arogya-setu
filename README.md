@@ -1,6 +1,6 @@
 # Aarogya Setu - Full-Stack Consultation Platform
 
-A comprehensive platform for booking Ayurvedic doctor consultations with real-time slot management, secure authentication, and beautiful UI.
+A comprehensive platform for booking Ayurvedic doctor consultations with real-time slot management, secure authentication, and beautiful UI. 
 
 ## 🚀 Features
 
